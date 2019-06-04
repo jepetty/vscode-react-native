@@ -31,7 +31,7 @@ export class GeneralMobilePlatform {
     public runArguments: string[];
 
     constructor(protected runOptions: IRunOptions, platformDeps: MobilePlatformDeps = {}) {
-        console.log('I\'m in the constructor now!');
+        console.log('I\'m in the constructor now!!');
         this.platformName = this.runOptions.platform;
         this.projectPath = this.runOptions.projectRoot;
         this.packager = platformDeps.packager || new Packager(this.runOptions.workspaceRoot, this.projectPath, SettingsHelper.getPackagerPort(this.runOptions.workspaceRoot), new PackagerStatusIndicator());
