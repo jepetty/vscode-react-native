@@ -80,6 +80,7 @@ export class GeneralMobilePlatform {
     public prewarmBundleCache(): Q.Promise<void> {
         // generalMobilePlatform should do nothing here. Method should be overriden by children for specific behavior.
         return Q.resolve<void>(void 0);
+        console.log('hi jessica');
     }
 
     public static getOptFromRunArgs(runArguments: any[], optName: string, binary: boolean = false): any {
