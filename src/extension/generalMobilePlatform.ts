@@ -31,6 +31,7 @@ export class GeneralMobilePlatform {
     public runArguments: string[];
 
     constructor(protected runOptions: IRunOptions, platformDeps: MobilePlatformDeps = {}) {
+        console.log('I\'m in the constructor now!!!!');
         this.platformName = this.runOptions.platform;
         this.projectPath = this.runOptions.projectRoot;
         this.packager = platformDeps.packager || new Packager(this.runOptions.workspaceRoot, this.projectPath, SettingsHelper.getPackagerPort(this.runOptions.workspaceRoot), new PackagerStatusIndicator());
@@ -79,6 +80,7 @@ export class GeneralMobilePlatform {
     public prewarmBundleCache(): Q.Promise<void> {
         // generalMobilePlatform should do nothing here. Method should be overriden by children for specific behavior.
         return Q.resolve<void>(void 0);
+        console.log('hi jessica');
     }
 
     public static getOptFromRunArgs(runArguments: any[], optName: string, binary: boolean = false): any {
